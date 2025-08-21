@@ -3,4 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="textColor">#FF000000</color>
+    <color name="myBlue">#344fa1</color>
+    <color name="titleColor">#7b97e3</color>
+    <color name="cardColor">#031956</color>
 </resources>

@@ -4,12 +4,13 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
+import androidx.recyclerview.widget.ItemTouchHelper
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.RecyclerView
 import com.example.trail2.Model.TodoViewModel
-import com.example.trail2.R
 import com.example.trail2.TodoData
 import com.example.trail2.TodoDatabase
 import com.example.trail2.adapter.TodoAdapter
@@ -51,6 +52,23 @@ class TodoFragment : Fragment() {
                 Toast.makeText(requireContext(), "No tasks available", Toast.LENGTH_SHORT).show()
             }
         }
+        val swipeToDelete = object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT) {
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder
+            ): Boolean {
+                return false
+            }
+
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                val position = viewHolder.adapterPosition
+                val task = adapter.getTaskAt(position)
+                viewModel.delete(task)
+                Toast.makeText(requireContext(), "Task deleted", Toast.LENGTH_SHORT).show()
+            }
+        }
+        ItemTouchHelper(swipeToDelete).attachToRecyclerView(binding.recyclerViewTodo)
 
     }
     override fun onDestroyView() {

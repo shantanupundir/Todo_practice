@@ -5,6 +5,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
+        android:background="@color/myBlue"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
@@ -47,6 +48,7 @@
             android:id="@+id/AddTask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:shapeAppearance="@style/ThemeOverlay.MaterialComponents.Dialog.Alert"
             android:layout_margin="16dp"
             android:contentDescription="@string/add_task"
             android:src="@drawable/baseline_add_24"

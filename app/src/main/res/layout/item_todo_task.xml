@@ -8,79 +8,42 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardCornerRadius="12dp"
-    app:cardPreventCornerOverlap="true"
-    app:cardUseCompatPadding="true">
+    app:strokeWidth="0dp"
+    app:cardElevation="0dp"
+    android:translationZ="8dp"
+    app:cardBackgroundColor="@color/cardColor">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:padding="16dp">
+        android:clickable="false"
+        android:focusable="false">
 
-        <CheckBox
+        <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/cbTaskComplete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:alpha="1.0"
+            android:button="@drawable/checkbox_selector"
+            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvTaskTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="8dp"
-            android:alpha="1.0"
-            android:textColor="@color/textColor"
+            android:textColor="@color/white"
             android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnEditTask"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="@id/cbTaskComplete"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cbTaskComplete"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toTopOf="@id/cbTaskComplete"
             tools:text="Tasks" />
 
-        <TextView
-            android:id="@+id/tvTaskDescription"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="@string/sample_description"
-            android:textColor="@color/textColor"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@id/tvTaskTitle"
-            app:layout_constraintStart_toStartOf="@id/tvTaskTitle"
-            app:layout_constraintTop_toBottomOf="@id/tvTaskTitle" />
-
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/btnEditTask"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="4dp"
-            android:contentDescription="@string/edit_task"
-            android:src="@drawable/outline_edit_24"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnDeleteTask"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/btnDeleteTask"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:alpha="1.0"
-            android:contentDescription="@string/delete_task"
-            android:src="@drawable/outline_delete_24"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

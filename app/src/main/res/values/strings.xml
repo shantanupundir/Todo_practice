@@ -6,7 +6,7 @@
     <string name="todo">Todo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="pending_tasks">Active Task</string>
+    <string name="pending_tasks">TODAY\'S TASKS</string>
     <string name="edit_task">edit_task</string>
     <string name="delete_task">delete_task</string>
     <string name="sample_description">sample_description</string>
