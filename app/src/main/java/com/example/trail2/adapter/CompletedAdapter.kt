@@ -38,9 +38,9 @@ class CompletedAdapter(private val onDeleteClick: (TodoData) -> Unit): RecyclerV
     override fun onBindViewHolder(holder:CompletedViewHolder, position: Int) {
         holder.bind(completedList[position])
         if (position % 2 == 0) {
-            holder.binding.parentLayout1.setBackgroundColor(getRandomColor())
+            holder.binding.parentLayout1.setCardBackgroundColor(getRandomColor())
         } else {
-            holder.binding.parentLayout1.setBackgroundColor(getRandomColor())
+            holder.binding.parentLayout1.setCardBackgroundColor(getRandomColor())
         }
     }
 

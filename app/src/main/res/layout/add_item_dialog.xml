@@ -20,7 +20,7 @@
             android:padding="12dp"
             android:layout_margin="12dp"
             android:background="@android:color/transparent">
-            <EditText
+            <androidx.appcompat.widget.AppCompatEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/titleEdit"
@@ -32,7 +32,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 />
 
-            <EditText
+            <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/descriptionEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

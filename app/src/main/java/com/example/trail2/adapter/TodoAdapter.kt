@@ -43,9 +43,9 @@ class TodoAdapter (
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
         holder.bind(taskList[position])
         if (position % 2 == 0) {
-            holder.binding.parentLayout.setBackgroundColor(getRandomColor())
+            holder.binding.parentLayout.setCardBackgroundColor(getRandomColor())
         } else {
-            holder.binding.parentLayout.setBackgroundColor(getRandomColor())
+            holder.binding.parentLayout.setCardBackgroundColor(getRandomColor())
         }
     }
     override fun getItemCount(): Int = taskList.size
