@@ -10,7 +10,7 @@
     <string name="edit_task">edit_task</string>
     <string name="delete_task">delete_task</string>
     <string name="sample_description">sample_description</string>
-    <string name="hello_from_fragmentcompleted">Finished</string>
+    <string name="hello_from_fragmentcompleted">FINISHED</string>
     <string name="sample_title1">sample_title1</string>
     <string name="sample_description1">sample_description1</string>
     <string name="title">Enter your title</string>

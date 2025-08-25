@@ -22,12 +22,7 @@ class CompletedFragment: Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel= ViewModelProvider(this)[TodoViewModel::class.java]
-
-        adapter = CompletedAdapter(
-            onDeleteClick = { task ->
-                viewModel.delete(task) // delete from DB
-            }
-        )
+        adapter = CompletedAdapter()
         binding.completedRecyclerView.adapter = adapter
 
         viewModel.allTasks.observe(viewLifecycleOwner) { tasks ->

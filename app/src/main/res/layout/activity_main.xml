@@ -30,7 +30,7 @@
                     android:contentDescription="@string/toggle_theme"
                     android:elevation="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </FrameLayout>
 
@@ -40,6 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/bottom_nav_style"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:menu="@menu/bottom_nav_menu" />
@@ -52,6 +53,7 @@
             android:layout_margin="16dp"
             android:contentDescription="@string/add_task"
             android:src="@drawable/baseline_add_24"
+            app:backgroundTint="#f68eff"
             app:layout_constraintBottom_toTopOf="@+id/bottomNav"
             app:layout_constraintEnd_toEndOf="parent" />
 

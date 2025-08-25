@@ -53,6 +53,7 @@ dependencies {
 
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+    implementation("com.github.cachapa:ExpandableLayout:2.9.2")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.1")
     implementation ("androidx.fragment:fragment-ktx:1.6.2")

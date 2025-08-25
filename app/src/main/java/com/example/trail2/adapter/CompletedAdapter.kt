@@ -7,24 +7,31 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.trail2.TodoData
 import com.example.trail2.databinding.ItemCompletedTaskBinding
+import com.example.trail2.databinding.ItemTodoTaskBinding
 
-class CompletedAdapter(private val onDeleteClick: (TodoData) -> Unit): RecyclerView.Adapter<CompletedAdapter.CompletedViewHolder>() {
+class CompletedAdapter: RecyclerView.Adapter<CompletedAdapter.CompletedViewHolder>() {
     private var completedList = listOf<TodoData>()
 
     inner class CompletedViewHolder(val binding: ItemCompletedTaskBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(task: TodoData) {
             Log.d("CompletedAdapter", "Binding: ${task.title}")
             binding.tv1TaskTitle.text=task.title
-            binding.tv1TaskDescription.text=task.description
-            binding.btn1DeleteTask.setOnClickListener { onDeleteClick(task) }
+            binding.TaskDescription1.text=task.description
+
+
+            binding.parentLayout1.setOnClickListener {
+                toggleDescription(binding)
+                binding.parentLayout1.cardElevation = if (binding.expandableLayout1.isExpanded) 8f else 0f
+            }
+
         }
     }
-    private fun getRandomColor(): Int {
-        val random = java.util.Random()
-        val r = 200 + random.nextInt(56)
-        val g = 200 + random.nextInt(56)
-        val b = 200 + random.nextInt(56)
-        return Color.rgb(r, g, b)
+    private fun toggleDescription(binding: ItemCompletedTaskBinding) {
+        if (binding.expandableLayout1.isExpanded) {
+            binding.expandableLayout1.collapse()
+        } else {
+            binding.expandableLayout1.expand()
+        }
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CompletedViewHolder {
         val binding = ItemCompletedTaskBinding.inflate(
@@ -37,11 +44,6 @@ class CompletedAdapter(private val onDeleteClick: (TodoData) -> Unit): RecyclerV
 
     override fun onBindViewHolder(holder:CompletedViewHolder, position: Int) {
         holder.bind(completedList[position])
-        if (position % 2 == 0) {
-            holder.binding.parentLayout1.setCardBackgroundColor(getRandomColor())
-        } else {
-            holder.binding.parentLayout1.setCardBackgroundColor(getRandomColor())
-        }
     }
 
     override fun getItemCount(): Int = completedList.size
