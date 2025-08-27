@@ -21,4 +21,11 @@ Asynchronous Tasks: Coroutines + Flow
 UI: RecyclerView, ViewBinding
 Other: ItemTouchHelper (for swipe-to-delete)
 
-📸 Screenshots
+📸 Screenshots:
+
+<img width="416" height="876" alt="Screenshot 2025-08-27 142356" src="https://github.com/user-attachments/assets/43b80dbf-531d-4f16-9ed1-907661923cf9" />
+<img width="413" height="869" alt="Screenshot 2025-08-27 141449" src="https://github.com/user-attachments/assets/08ec7844-3ba0-4b2c-8e6e-8115670574f8" />
+<img width="420" height="879" alt="Screenshot 2025-08-27 141508" src="https://github.com/user-attachments/assets/a7fd8753-fd75-44eb-bc9d-6e1cc80fa81e" />
+<img width="417" height="874" alt="Screenshot 2025-08-27 141515" src="https://github.com/user-attachments/assets/8e809b3d-1c43-42d5-af55-d9683272264f" />
+
+
