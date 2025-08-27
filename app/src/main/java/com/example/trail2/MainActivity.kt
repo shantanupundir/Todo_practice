@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: TodoViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Thread.sleep(2000)
+        Thread.sleep(2500)
         installSplashScreen()
         enableEdgeToEdge()
         binding= ActivityMainBinding.inflate(layoutInflater)
