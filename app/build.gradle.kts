@@ -57,6 +57,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.1")
     implementation ("androidx.fragment:fragment-ktx:1.6.2")
+    implementation("androidx.core:core-splashscreen:1.0.0")
 
     val room_version = "2.7.2"
     implementation("androidx.room:room-runtime:$room_version")

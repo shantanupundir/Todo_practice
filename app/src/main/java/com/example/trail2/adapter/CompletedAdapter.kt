@@ -43,6 +43,7 @@ class CompletedAdapter: RecyclerView.Adapter<CompletedAdapter.CompletedViewHolde
     }
 
     override fun onBindViewHolder(holder:CompletedViewHolder, position: Int) {
+        Log.d("CompletedAdapter", "onBindViewHolder: ${completedList[position].title}")
         holder.bind(completedList[position])
     }
 
