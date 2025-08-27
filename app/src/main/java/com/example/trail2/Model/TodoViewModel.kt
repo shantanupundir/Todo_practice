@@ -14,18 +14,14 @@ class TodoViewModel(application: Application) : AndroidViewModel(application) {
     private val dao: TodoDao = TodoDatabase
         .getDB(application)
         .todoDao()
-
     val allTasks: LiveData<List<TodoData>> = dao.getAll()
     val completedTasks: LiveData<List<TodoData>> = dao.getCompleted()
-
     fun insert(task: TodoData) = viewModelScope.launch {
         dao.insert(task)
     }
-
     fun delete(task: TodoData) = viewModelScope.launch {
         dao.delete(task)
     }
-
     fun updateTask(task: TodoData) = viewModelScope.launch {
         dao.update(task)
     }
