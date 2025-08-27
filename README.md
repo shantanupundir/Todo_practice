@@ -29,3 +29,42 @@ Other: ItemTouchHelper (for swipe-to-delete)
 <img width="317" height="574" alt="Screenshot 2025-08-27 141515" src="https://github.com/user-attachments/assets/8e809b3d-1c43-42d5-af55-d9683272264f" />
 
 
+🚀 Getting Started
+Prerequisites
+
+Android Studio (latest stable version recommended)
+Minimum SDK: 21 (Lollipop)
+Gradle (comes with Android Studio)
+
+
+Installation
+Clone the repository:
+git clone https://github.com/your-username/todo-app.git
+Open the project in Android Studio.
+Sync Gradle and build the project.
+Run the app on an emulator or physical device.
+
+
+
+📂 Project Structure
+📦 TodoApp
+ ┣ 📂 data
+ ┃ ┣ 📂 dao          # Data Access Objects
+ ┃ ┣ 📂 entity       # Room entities (Task.kt)
+ ┃ ┗ 📂 repository   # Repository layer
+ ┣ 📂 ui
+ ┃ ┣ 📂 viewmodel    # ViewModels
+ ┃ ┗ 📂 activities   # Activities & Fragments
+ ┣ 📂 utils          # Utility classes/helpers
+ ┗ MainActivity.kt
+
+
+🤝 Contributing
+Contributions are welcome! If you’d like to:
+Fork the repo.
+Create a new branch: git checkout -b feature/your-feature
+Commit changes: git commit -m "Add new feature"
+Push to branch: git push origin feature/your-feature
+Open a Pull Request.
+
+
